@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.happygeniubi.ssmdemo.dao.VideoMapper">
+
+    <cache eviction="LRU" flushInterval="100000" readOnly="true" size="1024"/>
+
+<!--    <select id="selectById" parameterType="java.lang.Integer" resultType="com.happygeniubi.ssmdemo.domain.Video" >-->
+    <select id="selectById" parameterType="Integer" resultType="Video" useCache="false" >
+        select * from video where id = #{video_id}
+    </select>
+</mapper>
