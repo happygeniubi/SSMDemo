@@ -2,6 +2,7 @@ package com.happygeniubi.ssmdemo.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -18,6 +19,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class VideoOrder {
     private int id;
     private String outTradeNo;
@@ -29,8 +31,4 @@ public class VideoOrder {
     private String videoImg;
     private int userId;
     private User user;
-
-    public VideoOrder() {
-        System.out.println("VideoOrder空构造函数被调用");
-    }
 }
