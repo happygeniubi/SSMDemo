@@ -1,10 +1,16 @@
 package com.happygeniubi.ssmdemo.domain;
 
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.io.Serializable;
 
 @Data
+@Component("Video")
+// 作用域(设置为多例,默认为单例, 多例:每次都新建一个对象, 单例:每次都复用同一个对象)
+// @Scope("prototype")
 public class Video implements Serializable {
 //    private int id;
 //    private String title;
@@ -13,7 +19,7 @@ public class Video implements Serializable {
 //    private int price;
 //    @JsonProperty("cover_img") // 返回字段别名
 //    private String coverImg;
-////    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
 //    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 //    private LocalDateTime createTime;
 //    private List<Chapter> chapterList;
@@ -63,7 +69,19 @@ public class Video implements Serializable {
 //        this.createTime = createTime;
 //    }
 
+    @PostConstruct
+    public void init() {
+        System.out.println("video类 init 方法被调用");
+    }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("video类 destroy 方法被调用");
+    }
 
     public Video() {
+
     }
+
+
 }

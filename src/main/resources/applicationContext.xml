@@ -13,6 +13,7 @@
 <!--    </bean>-->
 <!--  name 和 id一样都可以   -->
 
+<!--    <bean name ="video" class ="com.happygeniubi.ssmdemo.domain.Video" init-method="" destroy-method=""> -->
     <bean name ="video" class ="com.happygeniubi.ssmdemo.domain.Video">
         <property name="id" value="9"/>
         <property name="title" value="Spring666"/>

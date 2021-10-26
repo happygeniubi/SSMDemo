@@ -16,7 +16,9 @@ public class AnnotationConfigApplication {
         context.refresh();
 
         VideoService videoService = (VideoService) context.getBean("videoService");
+        Video video = (Video) context.getBean("Video");
         List<Video> videos = videoService.videoList();
         System.out.println("Video Size:" + videos.size());
+        System.out.println(video);
     }
 }
