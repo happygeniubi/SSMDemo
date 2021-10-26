@@ -4,8 +4,6 @@ import com.happygeniubi.ssmdemo.domain.Video;
 import com.happygeniubi.ssmdemo.service.VideoService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.List;
-
 public class AnnotationConfigApplication {
 
     public static void main(String[] args) {
@@ -17,10 +15,8 @@ public class AnnotationConfigApplication {
 
         VideoService videoService = (VideoService) context.getBean("videoService");
         Video video = (Video) context.getBean("Video");
-        List<Video> videos = videoService.videoList();
-        System.out.println("Video Size:" + videos.size());
+        videoService.videoList();
         System.out.println(video);
-
         videoService.findById(9);
 
     }
