@@ -19,7 +19,7 @@
     </bean>
 
     <bean id="timeHandler" class="com.happygeniubi.ssmdemo.aop.TimeHandler"/>
-    <bean id="videoService" class="com.happygeniubi.ssmdemo.service.impl.VideoServiceImpl"/>
+<!--    <bean id="videoService" class="com.happygeniubi.ssmdemo.service.impl.VideoServiceImpl"/>-->
 
     <!--  Aop配置  -->
     <aop:config>

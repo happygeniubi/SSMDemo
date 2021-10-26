@@ -1,8 +1,11 @@
 package com.happygeniubi.ssmdemo.aop;
 
+import org.springframework.stereotype.Component;
+
 import java.time.LocalDateTime;
 
 // 横切关注点
+@Component
 public class TimeHandler {
 
     public void printBefore() {
