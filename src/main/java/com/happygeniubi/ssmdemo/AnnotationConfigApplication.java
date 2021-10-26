@@ -20,5 +20,8 @@ public class AnnotationConfigApplication {
         List<Video> videos = videoService.videoList();
         System.out.println("Video Size:" + videos.size());
         System.out.println(video);
+
+        videoService.findById(9);
+
     }
 }
