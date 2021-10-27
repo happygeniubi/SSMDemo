@@ -32,4 +32,5 @@
 <!--                <aop:after method="printAfter" pointcut-ref="allMethodLogPointCut"/>-->
 <!--        </aop:aspect>-->
 <!--    </aop:config>-->
+<!--  总结: 这个配置文件里面的很多内容都可以通过注解实现  -->
 </beans>
